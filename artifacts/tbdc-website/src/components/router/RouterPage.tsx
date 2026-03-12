@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight, Globe, Rocket, Landmark, ChevronDown } from 'lucide-react';
-import Navbar from '../shared/Navbar';
 import Footer from '../shared/Footer';
 import SectionDivider from '../shared/SectionDivider';
 import VideoHeroBackground from '../shared/VideoHeroBackground';
@@ -80,16 +79,6 @@ export default function RouterPage() {
 
   return (
     <>
-      <Navbar
-        links={[
-          { label: 'Scaleup Founders', href: '#personas' },
-          { label: 'Startup Founders', href: '#personas' },
-          { label: 'Partners', href: '#personas' },
-        ]}
-        ctaLabel="Get Started"
-        ctaHref="#personas"
-      />
-
       <section
         id="hero"
         ref={heroRef}

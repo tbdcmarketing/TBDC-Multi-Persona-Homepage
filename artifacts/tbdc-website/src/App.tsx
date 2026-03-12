@@ -5,6 +5,7 @@ import StartupPage from './components/startup/StartupPage';
 import PartnersPage from './components/partners/PartnersPage';
 import TeamPage from './components/team/TeamPage';
 import MediaPage from './components/media/MediaPage';
+import NavWrapper from './components/navigation/NavWrapper';
 import NoiseOverlay from './components/shared/NoiseOverlay';
 import ScrollProgress from './components/shared/ScrollProgress';
 
@@ -13,6 +14,7 @@ export default function App() {
     <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/+$/, '') || '/'}>
       <NoiseOverlay />
       <ScrollProgress />
+      <NavWrapper />
       <Routes>
         <Route path="/" element={<RouterPage />} />
         <Route path="/scaleup" element={<ScaleupPage />} />

@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function PartnersCTA() {
   return (
-    <section id="partner-cta" className="bg-navy py-20 md:py-28">
+    <section id="partner-cta" className="bg-navy py-20 md:py-28 scroll-mt-[104px]">
       <div className="max-w-3xl mx-auto px-6 lg:px-16 text-center">
         <p className="text-sm font-bold uppercase tracking-wider mb-3"
           style={{ fontFamily: 'var(--font-mono)', color: '#D4A843' }}>

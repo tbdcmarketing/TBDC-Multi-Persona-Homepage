@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
-import Navbar from '../shared/Navbar';
 import Footer from '../shared/Footer';
 import SectionDivider from '../shared/SectionDivider';
 import ProofTicker from '../shared/ProofTicker';
@@ -22,12 +21,6 @@ export default function StartupPage() {
     return () => clearTimeout(timer);
   }, []);
 
-  const navLinks = [
-    { label: 'Programs', href: '#programs' },
-    { label: 'Mentorship', href: '#mentorship' },
-    { label: 'Track Record', href: '#track-record' },
-  ];
-
   const proofItems = [
     'Hydrostor — clean energy unicorn and TBDC alumni',
     'Turtle Island Recycling Corp. — circular economy unicorn',
@@ -38,7 +31,6 @@ export default function StartupPage() {
 
   return (
     <>
-      <Navbar links={navLinks} ctaLabel="Find Your Program" ctaHref="#programs" />
       <StartupHero />
       <ProofTicker items={proofItems} />
 

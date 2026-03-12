@@ -67,7 +67,7 @@ export default function PartnerTypes() {
   }, []);
 
   return (
-    <section id="partner-types" ref={sectionRef} className="bg-sand py-20 md:py-28">
+    <section id="partner-with-us" ref={sectionRef} className="bg-sand py-20 md:py-28 scroll-mt-[104px]">
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <div className="text-center mb-14">
           <p className="text-sm font-bold uppercase tracking-wider mb-3"

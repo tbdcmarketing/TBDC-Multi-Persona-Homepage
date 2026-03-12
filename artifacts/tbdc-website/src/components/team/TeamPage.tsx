@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
-import Navbar from '../shared/Navbar';
 import Footer from '../shared/Footer';
 import SectionDivider from '../shared/SectionDivider';
 import TeamHero from './TeamHero';
@@ -19,7 +18,6 @@ export default function TeamPage() {
 
   return (
     <>
-      <Navbar />
       <TeamHero />
       <SectionDivider fromColor="#0A1628" toColor="#FAF8F5" />
       <TeamGrid />

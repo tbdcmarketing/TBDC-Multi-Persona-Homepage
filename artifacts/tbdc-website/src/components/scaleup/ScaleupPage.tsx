@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
-import Navbar from '../shared/Navbar';
 import Footer from '../shared/Footer';
 import SectionDivider from '../shared/SectionDivider';
 import ProofTicker from '../shared/ProofTicker';
@@ -25,13 +24,6 @@ export default function ScaleupPage() {
     return () => clearTimeout(timer);
   }, []);
 
-  const navLinks = [
-    { label: 'Our Approach', href: '#approach' },
-    { label: 'Programs', href: '#programs' },
-    { label: 'Results', href: '#results' },
-    { label: 'Why Canada', href: '#why-canada' },
-  ];
-
   const proofItems = [
     'Romanian robotics co. closes North American contract before return flight',
     'Latvian defence tech: paying customers in 90 days',
@@ -41,7 +33,6 @@ export default function ScaleupPage() {
 
   return (
     <>
-      <Navbar links={navLinks} ctaLabel="Apply to Horizon or Pivot" ctaHref="#apply" />
       <ScaleupHero />
       <ProofTicker items={proofItems} />
 

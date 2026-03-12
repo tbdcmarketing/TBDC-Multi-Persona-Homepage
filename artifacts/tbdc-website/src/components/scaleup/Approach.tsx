@@ -18,7 +18,7 @@ export default function Approach() {
   }, []);
 
   return (
-    <section id="approach" ref={sectionRef} className="bg-sand py-20 md:py-28">
+    <section id="approach" ref={sectionRef} className="bg-sand py-20 md:py-28 scroll-mt-[104px]">
       <div className="max-w-4xl mx-auto px-6 lg:px-16">
         <p className="ap-text text-teal text-sm font-bold uppercase tracking-wider mb-3"
           style={{ fontFamily: 'var(--font-mono)' }}>

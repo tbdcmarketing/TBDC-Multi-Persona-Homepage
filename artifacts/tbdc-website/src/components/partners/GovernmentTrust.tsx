@@ -26,7 +26,7 @@ export default function GovernmentTrust() {
   }, []);
 
   return (
-    <section id="government" ref={sectionRef} className="bg-navy py-20 md:py-28">
+    <section id="government" ref={sectionRef} className="bg-navy py-20 md:py-28 scroll-mt-[104px]">
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <div className="text-center mb-14">
           <p className="text-sm font-bold uppercase tracking-wider mb-3"

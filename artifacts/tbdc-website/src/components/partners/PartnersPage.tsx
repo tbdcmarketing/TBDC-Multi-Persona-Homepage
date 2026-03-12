@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
-import Navbar from '../shared/Navbar';
 import Footer from '../shared/Footer';
 import SectionDivider from '../shared/SectionDivider';
 import ProofTicker from '../shared/ProofTicker';
@@ -22,12 +21,6 @@ export default function PartnersPage() {
     return () => clearTimeout(timer);
   }, []);
 
-  const navLinks = [
-    { label: 'Ecosystem', href: '#ecosystem' },
-    { label: 'Partner With Us', href: '#partner-types' },
-    { label: 'Government', href: '#government' },
-  ];
-
   const proofItems = [
     'Ontario government designee for Startup Visa program',
     'Recognized by the Prime Minister\'s Office',
@@ -38,7 +31,6 @@ export default function PartnersPage() {
 
   return (
     <>
-      <Navbar links={navLinks} ctaLabel="Partner With TBDC" ctaHref="#partner-cta" />
       <PartnersHero />
       <ProofTicker items={proofItems} />
 

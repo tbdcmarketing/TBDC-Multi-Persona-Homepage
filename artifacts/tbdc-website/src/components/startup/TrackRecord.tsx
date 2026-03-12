@@ -27,7 +27,7 @@ export default function TrackRecord() {
   }, []);
 
   return (
-    <section id="track-record" ref={sectionRef} className="bg-navy py-20 md:py-28">
+    <section id="track-record" ref={sectionRef} className="bg-navy py-20 md:py-28 scroll-mt-[104px]">
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <div className="text-center mb-14">
           <p className="text-teal text-sm font-bold uppercase tracking-wider mb-3"

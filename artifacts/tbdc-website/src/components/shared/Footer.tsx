@@ -12,8 +12,8 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-14">
-          <div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-6 gap-10 md:gap-8 mb-14">
+          <div className="lg:col-span-2">
             <img
               src={`${import.meta.env.BASE_URL}tbdc-logo-white.png`}
               alt="TBDC"
@@ -33,54 +33,7 @@ export default function Footer() {
             <p className="text-white/40 text-sm mt-2" style={{ fontFamily: 'var(--font-body)' }}>
               (416) 345-9437
             </p>
-          </div>
-
-          <div>
-            <h4 className="text-sm font-bold text-white/40 uppercase tracking-wider mb-4"
-              style={{ fontFamily: 'var(--font-mono)' }}>
-              Programs
-            </h4>
-            <ul className="space-y-2">
-              {['Horizon', 'Pivot', 'Land & Expand', 'Business Inc.', 'Biz Futures'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-white/60 hover:text-teal text-sm transition-colors"
-                    style={{ fontFamily: 'var(--font-body)' }}>
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-sm font-bold text-white/40 uppercase tracking-wider mb-4"
-              style={{ fontFamily: 'var(--font-mono)' }}>
-              For
-            </h4>
-            <ul className="space-y-2">
-              {[
-                { label: 'Scaleup Founders', to: '/scaleup' },
-                { label: 'Startup Founders', to: '/startup' },
-                { label: 'Partners & Ecosystem', to: '/partners' },
-                { label: 'Our Team', to: '/team' },
-                { label: 'Media & Press', to: '/media' },
-              ].map((link) => (
-                <li key={link.label}>
-                  <Link to={link.to} className="text-white/60 hover:text-teal text-sm transition-colors"
-                    style={{ fontFamily: 'var(--font-body)' }}>
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-sm font-bold text-white/40 uppercase tracking-wider mb-4"
-              style={{ fontFamily: 'var(--font-mono)' }}>
-              Stay Connected
-            </h4>
-            <div className="flex mb-4">
+            <div className="flex mt-4 max-w-xs">
               <input
                 type="email"
                 value={email}
@@ -97,6 +50,86 @@ export default function Footer() {
                 <Send size={14} />
               </button>
             </div>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-bold text-white/40 uppercase tracking-wider mb-4"
+              style={{ fontFamily: 'var(--font-mono)' }}>
+              Company
+            </h4>
+            <ul className="space-y-2">
+              {[
+                { label: 'Scaleup Founders', to: '/scaleup' },
+                { label: 'Startup Founders', to: '/startup' },
+                { label: 'Partners & Ecosystem', to: '/partners' },
+                { label: 'Our Team', to: '/team' },
+                { label: 'Media', to: '/media' },
+              ].map((link) => (
+                <li key={link.label}>
+                  <Link to={link.to} className="text-white/60 hover:text-teal text-sm transition-colors"
+                    style={{ fontFamily: 'var(--font-body)' }}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-bold text-white/40 uppercase tracking-wider mb-4"
+              style={{ fontFamily: 'var(--font-mono)' }}>
+              Programs
+            </h4>
+            <ul className="space-y-2">
+              {[
+                { label: 'Horizon', href: '/scaleup#programs' },
+                { label: 'Pivot', href: '/scaleup#programs' },
+                { label: 'Land & Expand', href: '/scaleup#programs' },
+                { label: 'Business Inc.', href: '/startup#programs' },
+                { label: 'Biz Futures', href: '/startup#programs' },
+              ].map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-white/60 hover:text-teal text-sm transition-colors"
+                    style={{ fontFamily: 'var(--font-body)' }}>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-bold text-white/40 uppercase tracking-wider mb-4"
+              style={{ fontFamily: 'var(--font-mono)' }}>
+              Workforce
+            </h4>
+            <ul className="space-y-2">
+              {['Explore Skilled Trades', 'Explore Trucking Careers'].map((link) => (
+                <li key={link}>
+                  <a href="#" className="text-white/60 hover:text-teal text-sm transition-colors"
+                    style={{ fontFamily: 'var(--font-body)' }}>
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-bold text-white/40 uppercase tracking-wider mb-4"
+              style={{ fontFamily: 'var(--font-mono)' }}>
+              Connect
+            </h4>
+            <ul className="space-y-2">
+              {['Book a Discovery Call', 'Apply Now', 'Contact Us'].map((link) => (
+                <li key={link}>
+                  <a href="#" className="text-white/60 hover:text-teal text-sm transition-colors"
+                    style={{ fontFamily: 'var(--font-body)' }}>
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 

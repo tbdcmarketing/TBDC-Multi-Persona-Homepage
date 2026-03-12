@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function StartupCTA() {
   return (
-    <section id="apply" className="bg-warm-white py-20 md:py-28">
+    <section id="apply" className="bg-warm-white py-20 md:py-28 scroll-mt-[104px]">
       <div className="max-w-3xl mx-auto px-6 lg:px-16 text-center">
         <p className="text-teal text-sm font-bold uppercase tracking-wider mb-3"
           style={{ fontFamily: 'var(--font-mono)' }}>

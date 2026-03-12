@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
-import Navbar from '../shared/Navbar';
 import Footer from '../shared/Footer';
 import SectionDivider from '../shared/SectionDivider';
 import MediaHero from './MediaHero';
@@ -20,7 +19,6 @@ export default function MediaPage() {
 
   return (
     <>
-      <Navbar />
       <MediaHero />
       <SectionDivider fromColor="#0A1628" toColor="#FAF8F5" />
       <MediaFeatured />

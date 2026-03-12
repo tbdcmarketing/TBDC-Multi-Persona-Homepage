@@ -18,7 +18,7 @@ export default function EcosystemRole() {
   }, []);
 
   return (
-    <section id="ecosystem" ref={sectionRef} className="bg-warm-white py-20 md:py-28">
+    <section id="ecosystem" ref={sectionRef} className="bg-warm-white py-20 md:py-28 scroll-mt-[104px]">
       <div className="max-w-4xl mx-auto px-6 lg:px-16">
         <h2 className="er-text text-2xl md:text-3xl lg:text-4xl font-extrabold text-charcoal mb-6 leading-tight"
           style={{ fontFamily: 'var(--font-heading)' }}>
