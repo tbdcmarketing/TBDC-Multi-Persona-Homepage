@@ -17,8 +17,8 @@ export default function Footer() {
             <img
               src={`${import.meta.env.BASE_URL}tbdc-logo-white.png`}
               alt="TBDC"
-              loading="lazy"
-              className="h-9 w-auto object-contain mb-2"
+              loading="eager"
+              className="h-7 md:h-9 w-auto object-contain mb-2"
             />
             <p className="text-white/50 text-sm mb-4"
               style={{ fontFamily: 'var(--font-body)' }}>
