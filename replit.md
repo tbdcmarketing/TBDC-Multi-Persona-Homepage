@@ -100,7 +100,7 @@ Utility scripts package. Each script is a `.ts` file in `src/` with a correspond
 TBDC (Toronto Business Development Centre) multi-persona marketing website. React + Vite SPA with Tailwind CSS v4, GSAP scroll animations, and react-router-dom.
 
 - **Preview path**: `/`
-- **Routes**: `/` (landing/persona router), `/scaleup`, `/startup`, `/partners`
+- **Routes**: `/` (landing/persona router), `/scaleup`, `/startup`, `/partners`, `/team`, `/media`
 - **Key dependencies**: react-router-dom, gsap (ScrollTrigger), lucide-react, Tailwind CSS v4
 - **Design tokens**: navy (#0A1628), teal (#00A88E), warm-white (#FAF8F5), sand (#F0ECE3), charcoal (#1E293B), gold (#D4A843)
 - **Fonts**: Plus Jakarta Sans (headings), Instrument Serif (italic accents), Inter (body), JetBrains Mono (labels/mono)
@@ -110,5 +110,9 @@ TBDC (Toronto Business Development Centre) multi-persona marketing website. Reac
   - `src/components/scaleup/` — ScaleupPage, ScaleupHero, MarketGap, Approach, ThreeStages, Programs, CaseStudies, WhyCanada, Qualifications, ScaleupCTA
   - `src/components/startup/` — StartupPage, StartupHero, BuildAlone, ProgramPaths, Mentorship, TrackRecord, StartupCTA
   - `src/components/partners/` — PartnersPage, PartnersHero, EcosystemRole, PartnerTypes, GovernmentTrust, Workforce, PartnersCTA
+  - `src/components/team/` — TeamPage, TeamHero, TeamMemberCard (LinkedIn overlay), TeamGrid (leadership + team sections), TeamCTA
+  - `src/components/media/` — MediaPage, MediaHero (stats), MediaCard (featured/default variants), MediaFeatured, MediaGrid (filterable by category), MediaCTA
+  - `src/data/teamData.ts` — 25 team members with names, titles, images, LinkedIn URLs
+  - `src/data/mediaData.ts` — 17 press/blog articles (5 featured) with categories and types
 - All copy is verbatim from the instruction document
 - Frontend-only (no backend API calls)

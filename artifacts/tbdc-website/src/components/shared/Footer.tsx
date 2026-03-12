@@ -60,6 +60,8 @@ export default function Footer() {
                 { label: 'Scaleup Founders', to: '/scaleup' },
                 { label: 'Startup Founders', to: '/startup' },
                 { label: 'Partners & Ecosystem', to: '/partners' },
+                { label: 'Our Team', to: '/team' },
+                { label: 'Media & Press', to: '/media' },
               ].map((link) => (
                 <li key={link.label}>
                   <Link to={link.to} className="text-white/60 hover:text-teal text-sm transition-colors"
