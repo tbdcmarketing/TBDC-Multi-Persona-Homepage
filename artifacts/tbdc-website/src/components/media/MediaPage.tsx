@@ -26,6 +26,7 @@ export default function MediaPage() {
       <MediaFeatured />
       <SectionDivider fromColor="#FAF8F5" toColor="#F0ECE3" />
       <MediaGrid />
+      <SectionDivider fromColor="#F0ECE3" toColor="#0A1628" />
       <MediaCTA />
       <Footer />
     </>

@@ -23,6 +23,7 @@ export default function TeamPage() {
       <TeamHero />
       <SectionDivider fromColor="#0A1628" toColor="#FAF8F5" />
       <TeamGrid />
+      <SectionDivider fromColor="#FAF8F5" toColor="#0A1628" />
       <TeamCTA />
       <Footer />
     </>

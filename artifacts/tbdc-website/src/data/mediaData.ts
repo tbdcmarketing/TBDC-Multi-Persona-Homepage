@@ -220,4 +220,17 @@ export const mediaEntries: MediaEntry[] = [
     image: null,
     featured: false,
   },
+  {
+    id: 'tbdc-ai-founders',
+    category: 'Thought Leadership',
+    type: 'Blog',
+    source: 'TBDC',
+    date: '2026-01-20',
+    title: 'Why AI-Native Founders Should Build in Canada First',
+    description:
+      'Canada\'s regulatory clarity, deep AI talent pools, and non-dilutive funding programs create a unique launchpad for AI-native startups — here\'s how founders can leverage the advantage.',
+    url: 'https://tbdc.com/why-ai-native-founders-should-build-in-canada-first/',
+    image: null,
+    featured: false,
+  },
 ];
