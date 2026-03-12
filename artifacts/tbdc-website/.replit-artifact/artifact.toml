@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "TBDC Website"
+version = "1.0.0"
+id = "artifacts/tbdc-website"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 24472
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/tbdc-website run dev"
+
+[services.env]
+PORT = "24472"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/tbdc-website", "run", "build"]
+publicDir = "artifacts/tbdc-website/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"

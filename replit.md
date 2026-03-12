@@ -94,3 +94,21 @@ Generated React Query hooks and fetch client from the OpenAPI spec (e.g. `useHea
 ### `scripts` (`@workspace/scripts`)
 
 Utility scripts package. Each script is a `.ts` file in `src/` with a corresponding npm script in `package.json`. Run scripts via `pnpm --filter @workspace/scripts run <script>`. Scripts can import any workspace package (e.g., `@workspace/db`) by adding it as a dependency in `scripts/package.json`.
+
+### `artifacts/tbdc-website` (`@workspace/tbdc-website`)
+
+TBDC (Toronto Business Development Centre) multi-persona marketing website. React + Vite SPA with Tailwind CSS v4, GSAP scroll animations, and react-router-dom.
+
+- **Preview path**: `/`
+- **Routes**: `/` (landing/persona router), `/scaleup`, `/startup`, `/partners`
+- **Key dependencies**: react-router-dom, gsap (ScrollTrigger), lucide-react, Tailwind CSS v4
+- **Design tokens**: navy (#0A1628), teal (#00A88E), warm-white (#FAF8F5), sand (#F0ECE3), charcoal (#1E293B), gold (#D4A843)
+- **Fonts**: Plus Jakarta Sans (headings), Instrument Serif (italic accents), Inter (body), JetBrains Mono (labels/mono)
+- **Component structure**:
+  - `src/components/shared/` — Navbar, Footer, NoiseOverlay, ScrollProgress, SectionDivider, ProofTicker, TimelineTable
+  - `src/components/router/` — RouterPage (landing page with persona quiz)
+  - `src/components/scaleup/` — ScaleupPage, ScaleupHero, MarketGap, Approach, ThreeStages, Programs, CaseStudies, WhyCanada, Qualifications, ScaleupCTA
+  - `src/components/startup/` — StartupPage, StartupHero, BuildAlone, ProgramPaths, Mentorship, TrackRecord, StartupCTA
+  - `src/components/partners/` — PartnersPage, PartnersHero, EcosystemRole, PartnerTypes, GovernmentTrust, Workforce, PartnersCTA
+- All copy is verbatim from the instruction document
+- Frontend-only (no backend API calls)
