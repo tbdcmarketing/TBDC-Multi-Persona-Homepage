@@ -35,7 +35,7 @@ export default function StartupHero() {
         overlayClassName="bg-gradient-to-b from-navy/70 via-navy/40 to-navy/70"
       />
 
-      <div className="relative z-10 px-6 lg:px-16 pb-32 md:pb-40 pt-32">
+      <div className="relative z-10 px-6 lg:px-16 pb-32 md:pb-40 pt-[104px]">
         <div className="max-w-4xl">
           <p className="st-hero-line text-sm font-bold uppercase tracking-wider text-teal mb-4"
             style={{ fontFamily: 'var(--font-mono)' }}>

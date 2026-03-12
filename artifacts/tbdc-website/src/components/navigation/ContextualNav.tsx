@@ -65,7 +65,7 @@ export default function ContextualNav({ config, configKey }: ContextualNavProps)
   return (
     <div
       ref={navRef}
-      className="fixed top-[64px] left-0 right-0 z-40 bg-navy/80 backdrop-blur-sm border-t border-warm-white/10 hidden md:block"
+      className="fixed top-14 md:top-16 left-0 right-0 z-40 bg-navy/80 backdrop-blur-sm border-t border-warm-white/10 hidden md:block"
       style={{ height: '40px' }}
     >
       <div ref={contentRef} className="max-w-7xl mx-auto px-6 lg:px-16 h-full flex items-center justify-between">

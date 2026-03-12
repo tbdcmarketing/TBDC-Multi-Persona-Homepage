@@ -89,7 +89,7 @@ export default function RouterPage() {
           overlayClassName="bg-navy/60"
         />
 
-        <div className="relative z-10 px-6 lg:px-16 py-32">
+        <div className="relative z-10 px-6 lg:px-16 pt-16 pb-32">
           <div className="max-w-4xl mx-auto text-center">
             <p className="router-hero-line text-teal text-sm font-bold uppercase tracking-wider mb-4"
               style={{ fontFamily: 'var(--font-mono)' }}>

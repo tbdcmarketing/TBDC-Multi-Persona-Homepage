@@ -30,8 +30,7 @@ export default function GlobalNav({ onMenuOpen }: GlobalNavProps) {
           : 'bg-transparent'
         }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-16 h-16 md:h-16 flex items-center justify-between"
-        style={{ height: '64px' }}>
+      <div className="max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between h-14 md:h-16">
         <Link to="/" className="flex items-center shrink-0">
           <img
             src={`${import.meta.env.BASE_URL}tbdc-logo-white.png`}

@@ -30,7 +30,7 @@ export default function MediaHero() {
         </svg>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-16 text-center pt-32 pb-20 md:pb-28">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-16 text-center pt-16 pb-20 md:pb-28">
         <p
           className="media-hero-eyebrow text-teal text-sm font-bold uppercase tracking-wider mb-4"
           style={{ fontFamily: 'var(--font-mono)' }}

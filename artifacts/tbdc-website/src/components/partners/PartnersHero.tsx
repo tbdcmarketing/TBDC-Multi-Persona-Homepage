@@ -35,7 +35,7 @@ export default function PartnersHero() {
         overlayClassName="bg-navy/65"
       />
 
-      <div className="relative z-10 px-6 lg:px-16 pb-32 md:pb-40 pt-32">
+      <div className="relative z-10 px-6 lg:px-16 pb-32 md:pb-40 pt-[104px]">
         <div className="max-w-4xl">
           <p className="pt-hero-line text-sm font-bold uppercase tracking-wider mb-4"
             style={{ fontFamily: 'var(--font-mono)', color: '#D4A843' }}>
