@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { X, ArrowRight, ChevronRight } from 'lucide-react';
 import gsap from 'gsap';
@@ -12,13 +12,21 @@ interface MobileMenuProps {
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const overlayRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const { pathname } = useLocation();
+  const [visible, setVisible] = useState(false);
 
   const isPersonaPage = PERSONA_ROUTES.includes(pathname);
   const contextualConfig = isPersonaPage ? CONTEXTUAL_NAV_CONFIG[pathname] : null;
 
   useEffect(() => {
-    if (!overlayRef.current || !panelRef.current) return;
+    if (isOpen) {
+      setVisible(true);
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!visible || !overlayRef.current || !panelRef.current) return;
 
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -32,17 +40,22 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         x: '100%',
         duration: 0.3,
         ease: 'power2.in',
+      });
+      gsap.to(overlayRef.current, {
+        opacity: 0,
+        duration: 0.3,
+        ease: 'power2.in',
         onComplete: () => {
           document.body.style.overflow = '';
+          setVisible(false);
         },
       });
-      gsap.to(overlayRef.current, { opacity: 0, duration: 0.3, ease: 'power2.in' });
     }
 
     return () => {
       document.body.style.overflow = '';
     };
-  }, [isOpen]);
+  }, [isOpen, visible]);
 
   const handleAnchorClick = (anchor: string) => {
     onClose();
@@ -56,10 +69,10 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     }, 350);
   };
 
-  if (!isOpen) return null;
+  if (!visible) return null;
 
   return (
-    <div className="fixed inset-0 z-[60] md:hidden">
+    <div ref={containerRef} className="fixed inset-0 z-[60] md:hidden">
       <div
         ref={overlayRef}
         className="absolute inset-0 bg-navy/50"
