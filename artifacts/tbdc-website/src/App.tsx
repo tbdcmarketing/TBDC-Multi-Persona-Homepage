@@ -8,7 +8,7 @@ import ScrollProgress from './components/shared/ScrollProgress';
 
 export default function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/+$/, '') || '/'}>
       <NoiseOverlay />
       <ScrollProgress />
       <Routes>
