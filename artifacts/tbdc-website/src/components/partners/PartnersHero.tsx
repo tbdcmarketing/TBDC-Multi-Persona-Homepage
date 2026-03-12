@@ -2,11 +2,13 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight } from 'lucide-react';
+import VideoHeroBackground from '../shared/VideoHeroBackground';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function PartnersHero() {
   const heroRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -14,24 +16,24 @@ export default function PartnersHero() {
       tl.from('.pt-hero-line', { y: 40, opacity: 0, stagger: 0.08, duration: 0.9 })
         .from('.pt-hero-body', { y: 30, opacity: 0, duration: 0.8 }, '-=0.4')
         .from('.pt-hero-cta', { y: 20, opacity: 0, stagger: 0.08, duration: 0.6 }, '-=0.4');
+
+      if (videoRef.current) {
+        gsap.to(videoRef.current, {
+          yPercent: 20, ease: 'none',
+          scrollTrigger: { trigger: heroRef.current, start: 'top top', end: 'bottom top', scrub: true },
+        });
+      }
     }, heroRef);
     return () => ctx.revert();
   }, []);
 
   return (
-    <section id="hero" ref={heroRef} className="relative min-h-[100dvh] flex flex-col justify-end">
-      <div className="absolute inset-0 bg-navy" />
-      <div className="absolute inset-0 opacity-[0.06] pointer-events-none">
-        <svg className="w-full h-full" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
-          <circle cx="400" cy="300" r="200" fill="none" stroke="#D4A843" strokeWidth="0.5" />
-          <circle cx="400" cy="300" r="150" fill="none" stroke="#D4A843" strokeWidth="0.3" />
-          <circle cx="400" cy="300" r="100" fill="none" stroke="#D4A843" strokeWidth="0.3" />
-          <circle cx="200" cy="400" r="80" fill="none" stroke="#00A88E" strokeWidth="0.3" />
-          <circle cx="600" cy="200" r="80" fill="none" stroke="#00A88E" strokeWidth="0.3" />
-          <line x1="200" y1="400" x2="400" y2="300" stroke="#D4A843" strokeWidth="0.3" />
-          <line x1="600" y1="200" x2="400" y2="300" stroke="#D4A843" strokeWidth="0.3" />
-        </svg>
-      </div>
+    <section id="hero" ref={heroRef} className="relative min-h-[100dvh] flex flex-col justify-end overflow-hidden">
+      <VideoHeroBackground
+        ref={videoRef}
+        src={`${import.meta.env.BASE_URL}videos/partners-hero.mp4`}
+        overlayClassName="bg-navy/65"
+      />
 
       <div className="relative z-10 px-6 lg:px-16 pb-32 md:pb-40 pt-32">
         <div className="max-w-4xl">

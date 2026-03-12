@@ -14,10 +14,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-14">
           <div>
-            <h3 className="text-2xl font-extrabold text-white mb-2"
-              style={{ fontFamily: 'var(--font-heading)' }}>
-              TBDC
-            </h3>
+            <img
+              src={`${import.meta.env.BASE_URL}tbdc-logo-white.png`}
+              alt="TBDC"
+              loading="lazy"
+              className="h-9 w-auto object-contain mb-2"
+            />
             <p className="text-white/50 text-sm mb-4"
               style={{ fontFamily: 'var(--font-body)' }}>
               Toronto Business Development Centre

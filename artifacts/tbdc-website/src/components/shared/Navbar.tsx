@@ -38,14 +38,14 @@ export default function Navbar({ links, ctaLabel = 'Apply Now', ctaHref = '#' }:
           : 'bg-transparent'
         }`}
     >
-      <Link to="/" className="flex items-center gap-2">
-        <span
-          className={`text-xl font-extrabold tracking-tight transition-colors duration-500
-            ${scrolled ? 'text-navy' : 'text-white'}`}
-          style={{ fontFamily: 'var(--font-heading)' }}
-        >
-          TBDC
-        </span>
+      <Link to="/" className="flex items-center">
+        <img
+          src={`${import.meta.env.BASE_URL}tbdc-logo-white.png`}
+          alt="TBDC"
+          loading="eager"
+          className={`h-7 md:h-9 w-auto object-contain transition-all duration-500
+            ${scrolled ? 'brightness-0' : ''}`}
+        />
       </Link>
 
       <div className="hidden md:flex items-center gap-8">

@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight } from 'lucide-react';
+import VideoHeroBackground from '../shared/VideoHeroBackground';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,15 +28,12 @@ export default function StartupHero() {
   }, []);
 
   return (
-    <section id="hero" ref={heroRef} className="relative min-h-[100dvh] flex flex-col justify-end">
-      <div className="absolute inset-0 overflow-hidden">
-        <video ref={videoRef} autoPlay muted loop playsInline
-          className="w-full h-full object-cover brightness-75"
-          style={{ willChange: 'transform' }}>
-          <source src="/videos/startup-hero.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/70 to-navy/30" />
-      </div>
+    <section id="hero" ref={heroRef} className="relative min-h-[100dvh] flex flex-col justify-end overflow-hidden">
+      <VideoHeroBackground
+        ref={videoRef}
+        src={`${import.meta.env.BASE_URL}videos/startup-hero.mp4`}
+        overlayClassName="bg-gradient-to-b from-navy/70 via-navy/40 to-navy/70"
+      />
 
       <div className="relative z-10 px-6 lg:px-16 pb-32 md:pb-40 pt-32">
         <div className="max-w-4xl">

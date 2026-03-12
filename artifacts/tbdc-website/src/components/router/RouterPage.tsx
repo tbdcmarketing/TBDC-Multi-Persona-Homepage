@@ -6,6 +6,7 @@ import { ArrowRight, Globe, Rocket, Landmark, ChevronDown } from 'lucide-react';
 import Navbar from '../shared/Navbar';
 import Footer from '../shared/Footer';
 import SectionDivider from '../shared/SectionDivider';
+import VideoHeroBackground from '../shared/VideoHeroBackground';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -92,18 +93,12 @@ export default function RouterPage() {
       <section
         id="hero"
         ref={heroRef}
-        className="relative min-h-[100dvh] flex flex-col justify-center bg-navy"
+        className="relative min-h-[100dvh] flex flex-col justify-center overflow-hidden"
       >
-        <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
-          <svg className="w-full h-full" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
-            <circle cx="200" cy="300" r="150" fill="none" stroke="#00A88E" strokeWidth="0.5" />
-            <circle cx="600" cy="200" r="120" fill="none" stroke="#00A88E" strokeWidth="0.5" />
-            <circle cx="400" cy="450" r="100" fill="none" stroke="#00A88E" strokeWidth="0.3" />
-            <line x1="200" y1="300" x2="600" y2="200" stroke="#00A88E" strokeWidth="0.3" />
-            <line x1="600" y1="200" x2="400" y2="450" stroke="#00A88E" strokeWidth="0.3" />
-            <line x1="200" y1="300" x2="400" y2="450" stroke="#00A88E" strokeWidth="0.3" />
-          </svg>
-        </div>
+        <VideoHeroBackground
+          src={`${import.meta.env.BASE_URL}videos/landing-hero.mp4`}
+          overlayClassName="bg-navy/60"
+        />
 
         <div className="relative z-10 px-6 lg:px-16 py-32">
           <div className="max-w-4xl mx-auto text-center">

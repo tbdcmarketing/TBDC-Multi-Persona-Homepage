@@ -105,7 +105,7 @@ TBDC (Toronto Business Development Centre) multi-persona marketing website. Reac
 - **Design tokens**: navy (#0A1628), teal (#00A88E), warm-white (#FAF8F5), sand (#F0ECE3), charcoal (#1E293B), gold (#D4A843)
 - **Fonts**: Plus Jakarta Sans (headings), Instrument Serif (italic accents), Inter (body), JetBrains Mono (labels/mono)
 - **Component structure**:
-  - `src/components/shared/` — Navbar, Footer, NoiseOverlay, ScrollProgress, SectionDivider, ProofTicker, TimelineTable
+  - `src/components/shared/` — Navbar, Footer, NoiseOverlay, ScrollProgress, SectionDivider, ProofTicker, TimelineTable, VideoHeroBackground
   - `src/components/router/` — RouterPage (landing page with persona quiz)
   - `src/components/scaleup/` — ScaleupPage, ScaleupHero, MarketGap, Approach, ThreeStages, Programs, CaseStudies, WhyCanada, Qualifications, ScaleupCTA
   - `src/components/startup/` — StartupPage, StartupHero, BuildAlone, ProgramPaths, Mentorship, TrackRecord, StartupCTA
@@ -114,5 +114,7 @@ TBDC (Toronto Business Development Centre) multi-persona marketing website. Reac
   - `src/components/media/` — MediaPage, MediaHero (stats), MediaCard (featured/default variants), MediaFeatured, MediaGrid (filterable by category), MediaCTA
   - `src/data/teamData.ts` — 25 team members with names, titles, images, LinkedIn URLs
   - `src/data/mediaData.ts` — 17 press/blog articles (5 featured) with categories and types
+- **Logo**: White TBDC logo PNG (`public/tbdc-logo-white.png`) used in Navbar (36px desktop / 28px mobile, inverts to dark when scrolled) and Footer
+- **Hero videos**: Four looping MP4 background videos in `public/videos/` (landing-hero, scaleup-hero, startup-hero, partners-hero) with page-specific overlays via `VideoHeroBackground` component
 - All copy is verbatim from the instruction document
 - Frontend-only (no backend API calls)
